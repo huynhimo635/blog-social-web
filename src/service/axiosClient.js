@@ -2,7 +2,8 @@
 import axios from 'axios'
 
 const axiosClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BASE_URL_API,
+  // baseURL: process.env.NEXT_PUBLIC_BASE_URL_API,
+  baseURL: 'https://blog-social-api.herokuapp.com/api/',
 
   headers: {
     'content-type': 'application/json',
@@ -11,7 +12,6 @@ const axiosClient = axios.create({
 
 axiosClient.interceptors.request.use(async (config) => {
   // handling token here
-
   return config
 })
 
