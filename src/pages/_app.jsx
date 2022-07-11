@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Provider } from 'react-redux'
-import { store } from '../store/store'
+import { Provider as StoreProvider } from 'react-redux'
+import { store } from '../store/redux'
 
 import '../styles/global.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider store={store}>
+    <StoreProvider store={store}>
       <Component {...pageProps} />
-    </Provider>
+    </StoreProvider>
   )
 }
 

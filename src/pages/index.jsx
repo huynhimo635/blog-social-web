@@ -2,14 +2,14 @@ import { useEffect } from 'react'
 
 import Head from 'next/head'
 
-import testApi from '../service/testApi'
+// import testApi from '../service/testApi'
 
 export default function Home() {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const data = await testApi.get()
-        console.log({ data })
+        // const data = await testApi.get()
+        // console.log({ data })
       } catch (error) {
         console.log({ error })
       }
@@ -18,7 +18,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+    <div className="theme-light">
       <Head>
         <title>Home Page</title>
         <link rel="icon" href="/favicon.ico" />
