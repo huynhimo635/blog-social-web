@@ -4,6 +4,8 @@ import Head from 'next/head'
 
 import testApi from '../service/testApi'
 
+import Header from '../components/Common/Header'
+
 export default function Home() {
   useEffect(() => {
     const fetch = async () => {
@@ -23,6 +25,9 @@ export default function Home() {
         <title>Home Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header/>
+
 
       <h1 className="flex bg-slate-600 text-center text-red">
         Test merge branch
